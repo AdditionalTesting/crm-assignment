@@ -77,6 +77,13 @@ class CRM
   end
 
   def search_by_attribute
+    print "What attribute would you like to search by:"
+    input = gets.chomp
+    print "what is the #{input}"
+    value = gets.chomp
+
+    print Contact.find_by(input, value)
+
 
   end
 
