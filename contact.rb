@@ -1,6 +1,6 @@
 class Contact
 
-attr_accessor :first_name, :last_name, :email, :notes
+attr_accessor :first_name, :last_name, :email, :note
 attr_reader :id
 
 @@contacts = []
@@ -45,7 +45,15 @@ attr_reader :id
   # 2. the new value for that attribute
   # and then make the appropriate change to the contact
   def update(attribute, value)
-
+    if attribute == 'first_name'
+      self.first_name = value
+    elsif attribute == 'last_name'
+      self.last_name = value
+    elsif attribute == 'email'
+      self.email = value
+    elsif attribute == 'note'
+      self.note = value
+    end
 
   end
 
