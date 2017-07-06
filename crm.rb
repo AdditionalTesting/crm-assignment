@@ -82,7 +82,7 @@ class CRM
     print "what is the #{input}"
     value = gets.chomp
 
-    print Contact.find_by(input, value)
+    print Contact.find_by(input, value).inspect
 
 
   end

@@ -104,7 +104,7 @@ attr_reader :id
 
 end
 
-en = Contact.create('Jen', 'Lopez', 'jlo@gmail.com', 'note1')
-clark = Contact.create('Clark', 'Kent', 'Clark@gmail.com', 'note2')
-joe = Contact.create('Joe', 'Smith', 'joe@gmail.com', 'note3')
-joe = Contact.create('Joe', 'Smith', 'joe@gmail.com', 'note4')
+# en = Contact.create('Jen', 'Lopez', 'jlo@gmail.com', 'note1')
+# clark = Contact.create('Clark', 'Kent', 'Clark@gmail.com', 'note2')
+# joe = Contact.create('Joe', 'Smith', 'joe@gmail.com', 'note3')
+# joe = Contact.create('Joe', 'Smith', 'joe@gmail.com', 'note4')
