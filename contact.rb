@@ -27,7 +27,7 @@ attr_reader :id
 
   # This method should return all of the existing contacts
   def self.all
-    @@contacts
+    return @@contacts
   end
 
   # This method should accept an id as an argument

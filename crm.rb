@@ -24,13 +24,15 @@ class CRM
     puts 'Enter a number: '
   end
 
-  def call_option
+  def call_option(user_selected)
+    case user_selected
      when 1 then add_new_contact
      when 2 then modify_existing_contact
      when 3 then delete_contact
      when 4 then display_all_contacts
      when 5 then search_by_attribute
-     when 6 break # exit here for 6
+     when 6 then exit # exit here for 6
+     end
   end
 
   def add_new_contact
@@ -51,15 +53,27 @@ class CRM
   end
 
   def modify_existing_contact
+    print "Who's contact would you like to modify?"
+    print "Please enter their first name: "
+    name = gets.chomp
 
+    print "Which attribute would you like to change?"
+    attribute = gets.chomp
+
+    print "What would you like to chance it to?"
+    value = gets.chomp
+
+    Contact.find_by('first_name', name).update(attribute, value)
   end
 
   def delete_contact
-
+    print "Please enter the first name of the contact you would like to delete"
+    name = gets.chomp
+    Contact.find_by('first_name', name).delete
   end
 
   def display_all_contacts
-
+   print Contact.all.inspect
   end
 
   def search_by_attribute
