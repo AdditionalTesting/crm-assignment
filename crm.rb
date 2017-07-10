@@ -89,3 +89,7 @@ class CRM
 
 
 end
+
+at_exit do
+  ActiveRecord::Base.connection.close
+end
