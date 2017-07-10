@@ -68,13 +68,13 @@ class CRM
     print "What would you like to chance it to?"
     value = gets.chomp
 
-    Contact.find_by('first_name', name).update(attribute, value)
+    Contact.find_by_first_name(name).update_attributes(attribute => value)
   end
 
   def delete_contact
     print "Please enter the first name of the contact you would like to delete"
     name = gets.chomp
-    Contact.find_by('first_name', name).delete
+    Contact.find_by_first_name(name).delete
   end
 
   def display_all_contacts
@@ -84,10 +84,10 @@ class CRM
   def search_by_attribute
     print "What attribute would you like to search by:"
     input = gets.chomp
-    print "what is the #{input}"
+    print "what is the #{input} :"
     value = gets.chomp
 
-    print Contact.find_by(input, value).inspect
+    print Contact.find_by_first_name(value).inspect
 
 
   end
